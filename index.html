@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jennifer Barrio | Full-Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-xl font-bold text-blue-600">JB.</span>
+            <div class="space-x-8 hidden md:block">
+                <a href="#sobre-mi" class="hover:text-blue-600 transition">Sobre mí</a>
+                <a href="#proyectos" class="hover:text-blue-600 transition">Proyectos</a>
+                <a href="#habilidades" class="hover:text-blue-600 transition">Habilidades</a>
+                <a href="#contacto" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-16 md:pt-48 md:pb-32 px-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 text-slate-900">
+                Jennifer Barrio <span class="text-blue-600">Rodríguez</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-600 mb-8 max-w-2xl mx-auto">
+                Desarrolladora Web Full-Stack. Transformando la visión del arte en soluciones tecnológicas para la industria.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#proyectos" class="bg-slate-900 text-white px-8 py-3 rounded-lg font-medium hover:bg-slate-800 transition">Ver Proyectos</a>
+                <a href="https://linkedin.com/in/jennifer-barrio-rodriguez" target="_blank" class="border border-slate-300 px-8 py-3 rounded-lg font-medium hover:bg-slate-100 transition">LinkedIn</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sobre Mí -->
+    <section id="sobre-mi" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6">De la Historia del Arte al Código</h2>
+                    <p class="text-lg text-slate-600 mb-4">
+                        Tras 4 años explorando la creatividad en Historia del Arte, decidí dar el salto al desarrollo de aplicaciones web (DAW). Esta combinación me permite afrontar proyectos técnicos con una sensibilidad especial por la interfaz y el orden.
+                    </p>
+                    <p class="text-lg text-slate-600">
+                        Mi experiencia en **Renault Group** me enseñó a trabajar bajo estándares industriales, desarrollando soluciones desde cero que impactan directamente en la eficiencia de la producción.
+                    </p>
+                </div>
+                <div class="md:w-1/2 bg-blue-50 p-8 rounded-2xl">
+                    <h3 class="font-bold text-xl mb-4 text-blue-800">Lo que estoy haciendo ahora:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-2">
+                            <span class="text-blue-500">✔</span> Curso avanzado de Cloud Coding (Próxima finalización)
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-blue-500">✔</span> Profundizando en Laravel y arquitecturas escalables
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-blue-500">✔</span> Perfeccionando mi inglés (B2) y Alemán (A1)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Proyectos Destacados</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Proyecto 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+                    <div class="p-8">
+                        <div class="text-blue-600 text-sm font-bold mb-2 tracking-widest uppercase">Renault - Sector Automotriz</div>
+                        <h3 class="text-2xl font-bold mb-4">Digitalización de Cordones de Mástico</h3>
+                        <p class="text-slate-600 mb-6">Desarrollo de un sistema en Blender para visualizar y documentar el recorrido de brazos robóticos. Proyecto integral desde la captura de datos hasta la interfaz de usuario.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-semibold">Blender</span>
+                            <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-semibold">JavaScript</span>
+                            <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-semibold">Industrial Dev</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+                    <div class="p-8">
+                        <div class="text-blue-600 text-sm font-bold mb-2 tracking-widest uppercase">Renault - Calidad e IA</div>
+                        <h3 class="text-2xl font-bold mb-4">Monitor de Defectos Full-Stack</h3>
+                        <p class="text-slate-600 mb-6">Dashboard para el monitoreo de defectos detectados por IA. Conexión a BBDD, gestión de usuarios y sistema de exportación a Excel para análisis de datos.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">PHP</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">MySQL</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">Data Visualization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-12">Stack Tecnológico</h2>
+            <div class="flex flex-wrap justify-center gap-10 text-4xl">
+                <div class="group">
+                    <i class="fab fa-php text-indigo-600 group-hover:scale-110 transition"></i>
+                    <p class="text-xs mt-2 font-bold uppercase tracking-tighter">PHP / Laravel</p>
+                </div>
+                <div class="group">
+                    <i class="fab fa-js text-yellow-500 group-hover:scale-110 transition"></i>
+                    <p class="text-xs mt-2 font-bold uppercase tracking-tighter">JavaScript</p>
+                </div>
+                <div class="group">
+                    <i class="fas fa-database text-slate-700 group-hover:scale-110 transition"></i>
+                    <p class="text-xs mt-2 font-bold uppercase tracking-tighter">MySQL</p>
+                </div>
+                <div class="group">
+                    <i class="fab fa-html5 text-orange-600 group-hover:scale-110 transition"></i>
+                    <p class="text-xs mt-2 font-bold uppercase tracking-tighter">HTML/CSS</p>
+                </div>
+                <div class="group">
+                    <i class="fab fa-git-alt text-red-600 group-hover:scale-110 transition"></i>
+                    <p class="text-xs mt-2 font-bold uppercase tracking-tighter">Git</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contacto -->
+    <footer id="contacto" class="bg-slate-900 text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-8">¿Hablamos?</h2>
+            <p class="mb-8 text-slate-400 text-lg">Busco nuevas oportunidades donde aportar mi visión técnica y analítica.</p>
+            <div class="flex justify-center gap-6 mb-12">
+                <a href="mailto:jennifer.barrod.01@gmail.com" class="text-2xl hover:text-blue-400"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/jennifer-barrio-rodriguez" class="text-2xl hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-2xl hover:text-blue-400"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="text-slate-500 text-sm">© 2024 Jennifer Barrio Rodríguez - Desarrollado con Tailwind CSS & Vercel</p>
+        </div>
+    </footer>
+
+</body>
+</html>
