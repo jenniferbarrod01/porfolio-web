@@ -1,23 +1,220 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digitalización Mástico Renault | Jennifer Barrio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <script>
-        tailwind.config = { theme: { extend: { colors: { 'brand-green': '#4F6057', 'brand-red': '#590606' } } } }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "brand-green": "#4F6057",
+              "brand-dark": "#1a1a1a",
+            },
+          },
+        },
+      };
     </script>
-</head>
-<body class="bg-slate-50">
-    <nav class="p-6"><a href="index.html" class="text-brand-green font-bold">← Volver al inicio</a></nav>
-    <main class="container mx-auto px-6 py-10 max-w-4xl">
-        <h1 class="text-4xl font-bold text-brand-green mb-6">Digitalización Mástico - Renault</h1>
-        <!-- <img src="IMAGEN_DEL_PROYECTO.jpg" class="w-full h-96 object-cover rounded-xl mb-8 shadow-lg"> -->
-        <div class="bg-white p-8 rounded-xl shadow-sm prose lg:prose-xl">
-            <h2 class="text-2xl font-bold text-brand-red mb-4">El Desafío</h2>
-            <p>Renault - Diseño e implementación del proyecto "documentación de diversidades" en Blender para la digitalización y documentación de cordones de mástico aplicados por sistemas robotizados conforme a estándares FOP en el sector automovilístico.</p>
-            <!--<h2 class="text-2xl font-bold text-brand-red mt-8 mb-4">Mi Solución</h2>
-             <p>Aquí explicas cómo usaste Blender y JS para solucionarlo...</p> -->
+  </head>
+  <body class="bg-slate-50 text-brand-dark font-sans">
+    <!-- Navegación -->
+    <nav class="p-6">
+      <div class="container mx-auto">
+        <a
+          href="index.html"
+          class="text-brand-green font-bold flex items-center gap-2 hover:text-brand-dark transition uppercase text-xs tracking-widest"
+        >
+          <i class="fas fa-arrow-left"></i> Volver al Inicio
+        </a>
+      </div>
+    </nav>
+
+    <!-- Header del Proyecto -->
+    <header class="py-12 bg-white border-b border-slate-200">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <h4
+          class="text-brand-green font-black uppercase tracking-[0.3em] text-xs mb-4 italic"
+        >
+          Sector Automotriz / Industria 4.0
+        </h4>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 italic">
+          Digitalización de Procesos de Mástico
+        </h1>
+
+        <div class="flex flex-wrap gap-4 mb-8">
+          <span
+            class="bg-slate-100 text-slate-600 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest border border-slate-200"
+            >Blender</span
+          >
+          <span
+            class="bg-slate-100 text-slate-600 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest border border-slate-200"
+            >Modelado 3D (STL)</span
+          >
+          <span
+            class="bg-slate-100 text-slate-600 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest border border-slate-200"
+            >Optimización de Procesos</span
+          >
         </div>
+
+        <p
+          class="text-xl text-slate-600 leading-relaxed italic border-l-4 border-brand-green pl-6"
+        >
+          Creación de un sistema visual de referencia en 3D para la
+          identificación de defectos en la aplicación de mástico, mejorando la
+          precisión en la línea de producción de Renault.
+        </p>
+      </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-16 max-w-4xl">
+      <!-- 01. Contexto y Mejora Proactiva -->
+      <section class="mb-20">
+        <h2
+          class="text-2xl font-bold mb-6 text-brand-green uppercase tracking-tighter"
+        >
+          01. El Desafío y Proactividad
+        </h2>
+        <div class="grid md:grid-cols-12 gap-10 items-center">
+          <p
+            class="md:col-span-8 text-slate-600 leading-relaxed text-lg text-justify"
+          >
+            El proyecto surgió de la necesidad de facilitar la identificación de
+            mástico no aplicado en las cajas de los vehículos. Inicialmente, el
+            requerimiento sugería el uso de Paint 3D; sin embargo, identifiqué
+            que las limitaciones técnicas de esta herramienta comprometerían la
+            precisión necesaria. Por iniciativa propia, propuse e implementé el
+            uso de Blender, permitiendo una manipulación profesional de archivos
+            .STL y una representación exacta de los cordones de mástico según
+            los estándares de seguridad industrial.
+          </p>
+          <div
+            class="md:col-span-4 bg-brand-green text-white p-6 rounded-xl shadow-lg"
+          >
+            <h4 class="font-bold mb-4 text-xs uppercase tracking-widest">
+              Hito Clave
+            </h4>
+            <p class="text-sm italic opacity-90">
+              Sustitución de herramientas básicas por software profesional
+              (Blender) para garantizar la escalabilidad y exactitud del
+              proyecto.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02. Proceso Técnico -->
+      <section
+        class="mb-20 bg-white p-10 rounded-2xl shadow-sm border border-slate-100"
+      >
+        <h2
+          class="text-2xl font-bold mb-8 text-brand-green uppercase tracking-tighter"
+        >
+          02. Implementación Técnica
+        </h2>
+        <div class="space-y-10">
+          <div class="border-b border-slate-100 pb-6">
+            <h3 class="font-bold text-lg mb-2 italic">
+              Modelado y Documentación
+            </h3>
+            <p class="text-slate-600 text-justify">
+              A partir de las siluetas en formato .STL de los modelos
+              vehiculares, procedí a la digitalización de los recorridos de
+              aplicación. Este proceso requirió una interpretación precisa de
+              las normas de seguridad y estándares de ingeniería para "pintar"
+              en el entorno 3D cada cordón real aplicado bajo caja.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-bold text-lg mb-2 italic">
+              Integración en Puesto de Trabajo
+            </h3>
+            <p class="text-slate-600 text-justify">
+              El resultado final fue integrado en la línea de producción
+              mediante una estación informática dedicada. Los operarios pueden
+              ahora contrastar en tiempo real la aplicación física bajo caja con
+              la referencia digital 3D, minimizando errores de omisión y
+              acelerando el control de calidad.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03. Comunicación y Soft Skills -->
+      <section class="mb-20">
+        <h2
+          class="text-2xl font-bold mb-6 text-brand-green uppercase tracking-tighter"
+        >
+          03. Coordinación y Gestión
+        </h2>
+        <div class="bg-slate-100 p-8 rounded-xl border-l-4 border-brand-green">
+          <p class="text-slate-700 leading-relaxed text-justify">
+            Este proyecto no fue una tarea aislada, sino un ejercicio de
+            coordinación constante. Participé semanalmente en los foros de
+            comunicación "Want to be", donde reportaba avances y métricas a
+            jefes de unidad, responsables superiores y al equipo de ingeniería.
+            Esta experiencia consolidó mi capacidad para comunicar conceptos
+            técnicos complejos a diferentes niveles jerárquicos y trabajar bajo
+            el rigor de los plazos de la industria automotriz.
+          </p>
+        </div>
+      </section>
+
+      <!-- 04. Liderazgo y Capacitación -->
+      <section class="mb-20">
+        <h2
+          class="text-2xl font-bold mb-6 text-brand-green uppercase tracking-tighter"
+        >
+          04. Transferencia de Conocimiento
+        </h2>
+        <div class="grid md:grid-cols-12 gap-10 items-center">
+          <div class="md:col-span-8">
+            <p class="text-slate-600 leading-relaxed text-lg text-justify">
+              Como responsable única de la implementación de Blender en este
+              proceso, lideré la fase de capacitación técnica para los usuarios
+              finales. Impartí personalmente una sesión formativa en la
+              <strong>Sala N2</strong> dirigida a operarios y Jefes de Unidad
+              (JU) del área de Másticos 2.
+            </p>
+            <p
+              class="text-slate-600 leading-relaxed text-lg text-justify mt-4 italic"
+            >
+              Durante esta formación, expliqué el funcionamiento del software,
+              la gestión de los archivos .STL y la metodología de actualización
+              de los modelos, asegurando que el equipo de planta fuera autónomo
+              en el manejo de la nueva herramienta digital.
+            </p>
+          </div>
+          <div
+            class="md:col-span-4 bg-slate-100 p-6 rounded-xl border-t-4 border-brand-green"
+          >
+            <h4
+              class="font-bold mb-2 text-sm uppercase tracking-widest text-brand-green"
+            >
+              Habilidad Destacada
+            </h4>
+            <p class="text-xs text-slate-500 italic">
+              Capacidad para traducir conceptos técnicos complejos a un lenguaje
+              operativo y funcional, facilitando la adopción tecnológica en
+              entornos de producción.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
-</body>
+
+    <!-- Footer -->
+    <footer
+      class="bg-brand-dark text-white/50 py-10 text-center text-[10px] tracking-widest uppercase"
+    >
+      <p>
+        &copy; 2026 Jennifer Barrio Rodríguez - Experiencia Industrial Renault
+      </p>
+    </footer>
+  </body>
 </html>

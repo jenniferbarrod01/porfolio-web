@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desarrollo Full-Stack Industrial | Jennifer Barrio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "brand-green": "#4F6057",
+              "brand-dark": "#1a1a1a",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-slate-50 text-brand-dark font-sans">
+    <!-- Navegación -->
+    <nav class="p-6">
+      <div class="container mx-auto">
+        <a
+          href="index.html"
+          class="text-brand-green font-bold flex items-center gap-2 hover:text-brand-dark transition uppercase text-xs tracking-widest"
+        >
+          <i class="fas fa-arrow-left"></i> Volver al Inicio
+        </a>
+      </div>
+    </nav>
+
+    <!-- Header del Proyecto -->
+    <header class="py-12 bg-white border-b border-slate-200">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <h4
+          class="text-brand-green font-black uppercase tracking-[0.3em] text-xs mb-4 italic"
+        >
+          Full-Stack / Soluciones Operativas
+        </h4>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 italic">
+          Digitalización de Puestos de Trabajo y Gestión de Datos
+        </h1>
+
+        <div class="flex flex-wrap gap-4 mb-8">
+          <span
+            class="bg-slate-100 text-slate-600 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest border border-slate-200"
+            >PHP & MySQL</span
+          >
+          <span
+            class="bg-slate-100 text-slate-600 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest border border-slate-200"
+            >JavaScript</span
+          >
+          <span
+            class="bg-slate-100 text-slate-600 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest border border-slate-200"
+            >Batch Scripting</span
+          >
+        </div>
+
+        <p
+          class="text-xl text-slate-600 leading-relaxed italic border-l-4 border-brand-green pl-6"
+        >
+          Desarrollo integral de plataformas web para el control de producción,
+          mantenimiento y batonaje, optimizando el registro de datos y la
+          trazabilidad administrativa.
+        </p>
+      </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-16 max-w-4xl">
+      <!-- 01. Desarrollo de Software y BBDD -->
+      <section class="mb-20">
+        <h2
+          class="text-2xl font-bold mb-6 text-brand-green uppercase tracking-tighter"
+        >
+          01. Arquitectura de Datos y Control Operativo
+        </h2>
+        <div class="grid md:grid-cols-12 gap-10 items-center">
+          <p
+            class="md:col-span-8 text-slate-600 leading-relaxed text-lg text-justify"
+          >
+            Lideré el diseño y creación desde cero de bases de datos **MySQL**
+            para los módulos de Puesto Fijo, Batonaje y Mantenimiento.
+            Desarrollé interfaces dinámicas que permiten a los operarios
+            registrar tareas y consultar historiales en tiempo real. Implementé
+            un sistema de alertas visuales mediante colores, categorizando la
+            importancia de los registros según sus fechas de vencimiento,
+            garantizando que ninguna tarea crítica quedara desatendida.
+          </p>
+          <div
+            class="md:col-span-4 bg-brand-green text-white p-6 rounded-xl shadow-lg"
+          >
+            <h4 class="font-bold mb-4 text-xs uppercase tracking-widest">
+              Funcionalidad Pro
+            </h4>
+            <p class="text-xs italic opacity-90">
+              Exportación automatizada a Excel de historiales completos,
+              facilitando el análisis de datos inmediato para la Jefatura de
+              Unidad.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02. Auditoría y Roles de Usuario -->
+      <section
+        class="mb-20 bg-white p-10 rounded-2xl shadow-sm border border-slate-100"
+      >
+        <h2
+          class="text-2xl font-bold mb-8 text-brand-green uppercase tracking-tighter"
+        >
+          02. Panel de Administración y Seguridad
+        </h2>
+        <div class="space-y-10">
+          <div class="border-b border-slate-100 pb-6">
+            <h3 class="font-bold text-lg mb-2 italic">
+              Sistema de Auditoría (Audit Log)
+            </h3>
+            <p class="text-slate-600 text-justify">
+              Para garantizar la integridad de la información, desarrollé un
+              panel administrativo con permisos avanzados. A diferencia del
+              historial general, este módulo registraba con identificación
+              unívoca quién, cuándo y qué dato había sido modificado o
+              eliminado, proporcionando una trazabilidad total para la gestión
+              de administradores.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-bold text-lg mb-2 italic">
+              Integración Visual Corporativa
+            </h3>
+            <p class="text-slate-600 text-justify">
+              Toda la interfaz fue diseñada siguiendo estrictamente la identidad
+              visual de Renault. Además, elaboré documentación técnica y
+              presentaciones (PPTX) para la formación de operarios y explicación
+              del flujo de datos ante los responsables del área.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03. Hardware y Sistemas -->
+      <section class="mb-20">
+        <h2
+          class="text-2xl font-bold mb-6 text-brand-green uppercase tracking-tighter"
+        >
+          03. Soporte de Infraestructura e IT
+        </h2>
+        <div class="bg-slate-100 p-8 rounded-xl border-l-4 border-brand-green">
+          <p class="text-slate-700 leading-relaxed text-justify">
+            Mi labor fue más allá del desarrollo web, actuando como soporte
+            técnico integral. Me encargué de la instalación física de
+            ordenadores en línea, la reconfiguración de puestos de trabajo y la
+            modificación de archivos .bat (Batch) para la automatización de
+            procesos locales. Esta visión me permitió asegurar que el
+            software desarrollado funcionara perfectamente sobre el hardware y
+            la red de la planta.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="bg-brand-dark text-white/50 py-10 text-center text-[10px] tracking-widest uppercase"
+    >
+      <p>
+        &copy; 2026 Jennifer Barrio Rodríguez - Desarrollo Industrial Full-Stack
+      </p>
+    </footer>
+  </body>
+</html>
