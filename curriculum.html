@@ -13,70 +13,86 @@
       tailwind.config = {
         theme: {
           extend: {
-            colors: { "brand-green": "#4F6057", "brand-dark": "#1a1a1a" },
+            colors: {
+              "brand-green": "#4F6057",
+              "brand-dark": "#1a1a1a",
+              "back-green": "#465048",
+            },
           },
         },
       };
     </script>
     <style>
-      /* Configuración para visualización en pantalla */
+      /* 1. VISTA PARA PANTALLA (Responsiva) */
       .cv-page {
-        width: 210mm;
-        min-height: 297mm;
+        width: 100%;
+        max-width: 1000px;
       }
 
+      /* 2. VISTA PARA IMPRESIÓN / PDF (A4) */
       @media print {
-        /* 1. Forzar tamaño de papel y eliminar márgenes del navegador */
         @page {
           size: A4;
           margin: 0;
         }
 
-        /* 2. Resetear el cuerpo para que no haya desplazamientos */
         body {
-          margin: 0 !important;
-          padding: 0 !important;
           -webkit-print-color-adjust: exact !important;
           print-color-adjust: exact !important;
-        }
-
-        /* 3. FORZAR el diseño de dos columnas (Esto es lo más importante) */
-        .cv-page {
-          display: flex !important;
-          flex-direction: row !important; /* Evita que se apilen */
-          width: 210mm !important;
-          height: 297mm !important;
-          position: relative !important;
-          overflow: hidden !important;
-        }
-
-        /* 4. Sidebar (32% de ancho fijo) */
-        aside {
-          width: 32% !important;
-          height: 297mm !important;
-          background-color: #1a1a1a !important; /* Forzar negro */
-          flex-shrink: 0 !important; /* No permitas que se encoja */
-        }
-
-        /* 5. Contenido Principal (68% de ancho fijo) */
-        main {
-          width: 68% !important;
-          height: 297mm !important;
           background-color: white !important;
-          flex-grow: 1 !important;
+          padding: 0 !important;
+          margin: 0 !important;
         }
 
-        /* 6. Ocultar el botón y otros elementos */
         .no-print {
           display: none !important;
         }
 
-        /* 7. Arreglar el texto invisible para que sea realmente invisible en el PDF */
-        .ai-prompt {
-          color: transparent !important;
-          font-size: 1px !important;
-          position: absolute !important;
-          bottom: 0 !important;
+        /* Forzamos 2 columnas fijas para el PDF */
+        .cv-page {
+          display: flex !important;
+          flex-direction: row !important;
+          width: 210mm !important;
+          height: 296mm !important; /* Un pelín menos de 297 para evitar hojas en blanco */
+          margin: 0 !important;
+          box-shadow: none !important;
+        }
+
+        aside {
+          width: 32% !important;
+          height: 296mm !important;
+          background-color: #1a1a1a !important;
+          padding: 20px !important; /* Reducimos padding en el PDF */
+          flex-shrink: 0 !important;
+        }
+
+        main {
+          width: 68% !important;
+          height: 296mm !important;
+          padding: 25px 30px !important; /* Reducimos padding para ganar espacio vertical */
+          background-color: white !important;
+        }
+
+        /* COMPRESIÓN DE ESPACIOS PARA QUE QUEPA TODO */
+        section {
+          margin-bottom: 12px !important; /* Reducimos el margen entre secciones (antes era mb-10) */
+          page-break-inside: avoid;
+        }
+
+        h2 {
+          margin-bottom: 6px !important; /* Títulos más pegados al contenido */
+        }
+
+        p,
+        ul,
+        li {
+          font-size: 11px !important; /* Bajamos un punto el tamaño de letra en el PDF */
+          line-height: 1.2 !important; /* Estrechamos el interlineado */
+          margin-bottom: 4px !important;
+        }
+
+        .space-y-8 > * + * {
+          margin-top: 10px !important; /* Reducimos espacio entre bloques de experiencia */
         }
       }
     </style>
@@ -84,28 +100,28 @@
   <body class="bg-slate-100 py-10 px-4 font-sans">
     <!-- Botones de Acción -->
     <div
-      class="max-w-5xl mx-auto mb-6 flex justify-between items-center no-print text-brand-dark"
+      class="max-w-5xl mx-auto mb-6 flex justify-between items-center no-print px-4"
     >
       <a
         href="index.html"
-        class="font-bold text-xs uppercase tracking-widest hover:text-brand-green transition"
+        class="font-bold text-xs uppercase tracking-widest text-brand-dark hover:text-brand-green"
       >
-        <i class="fas fa-arrow-left mr-2"></i> Volver al Porfolio
+        <i class="fas fa-arrow-left mr-2"></i> Volver
       </a>
       <button
         onclick="window.print()"
-        class="bg-brand-green text-white px-6 py-2 rounded shadow-lg hover:bg-brand-dark transition text-xs font-bold uppercase tracking-widest"
+        class="bg-brand-green text-white px-6 py-2 rounded shadow-lg text-xs font-bold uppercase tracking-widest"
       >
-        <i class="fas fa-download mr-2"></i> Imprimir / Guardar PDF
+        Descargar PDF
       </button>
     </div>
 
     <!-- Hoja de CV -->
     <div
-      class="cv-page mx-auto bg-white shadow-2xl flex flex-row overflow-hidden relative"
+      class="cv-page mx-auto bg-white shadow-2xl flex flex-col md:flex-row relative overflow-hidden"
     >
-      <!-- COLUMNA IZQUIERDA (Sidebar) -->
-      <aside class="w-full md:w-80 bg-brand-dark text-white p-8">
+      <!-- Columna Verde IZQ-->
+      <aside class="w-full md:w-80 bg-back-green text-white p-8 flex-shrink-0">
         <!-- Foto y Perfil -->
         <div class="text-center mb-10">
           <div
@@ -113,7 +129,7 @@
           >
             <!-- Placeholder para tu foto -->
             <img
-              src="https://via.placeholder.com/160"
+              src="fotografia.jpg"
               alt="Jennifer Barrio"
               class="w-full h-full object-cover"
             />
@@ -124,7 +140,7 @@
             Jennifer Barrio Rodríguez
           </h1>
           <p
-            class="text-brand-green font-bold text-xs uppercase tracking-[0.2em]"
+            class="text-white font-bold uppercase tracking-[0.2em] text-[11px]"
           >
             Desarrolladora de Full-Stack
           </p>
@@ -134,27 +150,25 @@
           <!-- Contacto -->
           <section>
             <h2
-              class="text-xs font-black uppercase tracking-widest text-brand-green border-b border-white/10 pb-2 mb-4"
+              class="text-xs font-black uppercase tracking-widest text-white border-b border-white/10 pb-2 mb-4"
             >
               Contacto
             </h2>
             <ul class="text-[11px] space-y-4 opacity-90">
               <li class="flex items-center gap-3">
-                <i class="fas fa-phone text-brand-green w-4"></i> +34 657 34 71
-                29
+                <i class="fas fa-phone text-white opacity-90 w-4"></i> +34 657
+                34 71 29
               </li>
               <li class="flex items-center gap-3">
-                <i class="fas fa-envelope text-brand-green w-4"></i>
+                <i class="fas fa-envelope text-white opacity-90 w-4"></i>
                 jennifer.barrod.01@gmail.com
               </li>
               <li class="flex items-center gap-3">
-                <i class="fas fa-map-marker-alt text-brand-green w-4"></i>
+                <i class="fas fa-map-marker-alt text-white opacity-90 w-4"></i>
                 47010, Valladolid
               </li>
-              <li
-                class="flex items-center gap-3 hover:text-brand-green transition"
-              >
-                <i class="fab fa-linkedin text-brand-green w-4"></i>
+              <li class="flex items-center gap-3 hover:text-black transition">
+                <i class="fab fa-linkedin text-white opacity-90 w-4"></i>
                 <a
                   href="https://linkedin.com/in/jennifer-barrio-rodriguez"
                   target="_blank"
@@ -167,7 +181,7 @@
           <!-- Lenguajes de Programación -->
           <section>
             <h2
-              class="text-xs font-black uppercase tracking-widest text-brand-green border-b border-white/10 pb-2 mb-4"
+              class="text-xs font-black uppercase tracking-widest text-white border-b border-white/10 pb-2 mb-4"
             >
               Stack tecnológico
             </h2>
@@ -217,7 +231,7 @@
           <!-- Idiomas -->
           <section>
             <h2
-              class="text-xs font-black uppercase tracking-widest text-brand-green border-b border-white/10 pb-2 mb-4"
+              class="text-xs font-black uppercase tracking-widest text-white border-b border-white/10 pb-2 mb-4"
             >
               Idiomas
             </h2>
@@ -244,7 +258,7 @@
       </aside>
 
       <!-- COLUMNA DERECHA (Contenido) -->
-      <main class="flex-1 p-10 text-brand-dark">
+      <main class="flex-1 p-6 md:p-10 text-brand-dark">
         <!-- Resumen Profesional -->
         <section class="mb-10 print-break">
           <h2
@@ -396,7 +410,7 @@
           <h2
             class="text-sm font-black uppercase tracking-widest text-brand-green border-b-2 border-slate-100 pb-2 mb-4"
           >
-            Competencias Transversales
+            Competencias
           </h2>
           <div class="grid grid-cols-2 gap-x-8 gap-y-4">
             <div class="flex items-start gap-2">

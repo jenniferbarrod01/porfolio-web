@@ -70,10 +70,21 @@
           Solución interactiva para centralizar el acceso a la agenda cultural
           de Castilla y León mediante el consumo de datos abiertos oficiales.
         </p>
+
+        <div class="my-8">
+          <video
+            controls
+            class="w-full rounded-xl shadow-lg aspect-video object-cover border border-slate-200"
+          >
+            <source src="EventosCulturalesCyL.mp4" type="video/mp4" />
+            Tu navegador no soporta la reproducción de vídeos.
+          </video>
+          <p class="text-center text-xs text-slate-400 mt-2 italic">
+            Demostración interactiva del Portal Cultural CyL
+          </p>
+        </div>
       </div>
     </header>
-
-    <img src="ruta/de/tu/foto.png" class="w-full rounded-xl my-8" />
 
     <!-- Contenido Detallado -->
     <main class="container mx-auto px-6 py-16 max-w-4xl">
@@ -88,7 +99,9 @@
         <!-- Cambiamos grid-cols-2 por grid-cols-12 -->
         <div class="grid md:grid-cols-12 gap-10 items-center">
           <!-- Párrafo: md:col-span-8 (ocupa 8 de 12 columnas -> 2/3) -->
-          <p class="md:col-span-8 text-slate-600 leading-relaxed text-lg text-justify">
+          <p
+            class="md:col-span-8 text-slate-600 leading-relaxed text-lg text-justify"
+          >
             El objetivo principal fue transformar un flujo masivo de datos
             crudos (procedentes de la API de la Junta de CyL) en una experiencia
             de usuario fluida, visual y útil. El reto técnico residía en la
@@ -133,11 +146,11 @@
               Arquitectura Desacoplada
             </h3>
             <p class="text-slate-600 text-justify">
-              Uso de Laravel como motor de backend para gestionar la lógica
-              de negocio y el enrutamiento, mientras que el frontend fue
-              desarrollado íntegramente con React, permitiendo una
-              navegación tipo SPA (Single Page Application) que elimina los
-              tiempos de recarga.
+              Uso de Laravel como motor de backend para gestionar la lógica de
+              negocio y el enrutamiento, mientras que el frontend fue
+              desarrollado íntegramente con React, permitiendo una navegación
+              tipo SPA (Single Page Application) que elimina los tiempos de
+              recarga.
             </p>
           </div>
           <div>
@@ -145,10 +158,10 @@
               Geolocalización e Interactividad
             </h3>
             <p class="text-slate-600 text-justify">
-              Implementación de un mapa interactivo que permite al usuario explorar
-              eventos por proximidad geográfica. Los marcadores se actualizan
-              dinámicamente según los filtros aplicados, vinculando la ubicación
-              del evento con su ficha técnica detallada.
+              Implementación de un mapa interactivo que permite al usuario
+              explorar eventos por proximidad geográfica. Los marcadores se
+              actualizan dinámicamente según los filtros aplicados, vinculando
+              la ubicación del evento con su ficha técnica detallada.
             </p>
           </div>
           <div>
@@ -157,9 +170,9 @@
             </h3>
             <p class="text-slate-600 text-justify">
               Desarrollo de un motor de búsqueda que permite filtrar por
-              provincia, categoría cultural, fechas, precio, etc. facilitando la búsqueda
-              personalizada entre cientos de registros actualizados en tiempo
-              real.
+              provincia, categoría cultural, fechas, precio, etc. facilitando la
+              búsqueda personalizada entre cientos de registros actualizados en
+              tiempo real.
             </p>
           </div>
         </div>
@@ -175,7 +188,7 @@
         </p>
 
         <a
-          href="https://github.com/TU_USUARIO/TU_REPOSITORIO"
+          href="https://github.com/jenniferbarrod01/proyecto_intermodular_2026.git"
           target="_blank"
           class="inline-flex items-center gap-3 bg-brand-dark text-white px-10 py-4 rounded-lg font-bold hover:bg-brand-green transition-all shadow-xl"
         >
